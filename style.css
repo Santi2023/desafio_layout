@@ -7,7 +7,7 @@
 .page-header {
     display: flex;
     align-items: center;
-    background: green;
+    background: #00943b;
 }
 
 .page-title {
@@ -47,11 +47,28 @@
     align-items: center;
 }
 
+.button-aside {
+    display: none;
+    width: 15px;
+    height: 15px;
+    position: relative;
+    top: 18rem;
+    left: 17.8rem;
+}
+
+.button-aside.active {
+    top: 10rem;
+    left: 0;
+}
+
 .container-aside {
     width: 20%;
     height: 100%;
     border-right: 1px solid green;
+    border-bottom: 1px solid green;
 }
+
+
 
 .items-aside {
     display: flex;
@@ -70,11 +87,12 @@
 }
 
 .container-section {
-    width: 70%;
+    width: 80%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .product-card {
@@ -113,7 +131,35 @@
     color: #c7c7c7;
 }
 
-.container-footer{
-    background: green;
+.container-footer {
+    background: #00943b;
     height: 12vh;
+}
+
+@media (max-width: 1319px) {
+    .container-main {
+        align-items: normal;
+    }
+
+    .button-aside {
+        display: block;
+    }
+
+    .container-aside {
+        position: absolute;
+        left: 0px;
+        width: auto;
+        display: none;
+        background: black;
+        opacity: 85%;
+        color: white;
+    }
+
+    .container-section {
+        width: 100%;
+    }
+}
+
+.click {
+    display: block;
 }
